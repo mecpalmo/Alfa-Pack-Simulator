@@ -11,6 +11,8 @@ def plotOccurances(eventList):
     eventValues = list(eventDict.values())
     plt.plot(eventKeys, eventValues)
     plt.grid()
+    plt.xlabel("When acquired")
+    plt.ylabel("Packs Acquired")
     plt.show()
 
 def getMedian(eventList):
@@ -48,6 +50,5 @@ for i in range(0,numOfMatches):
 plotOccurances(wonPackProbs)
 plotOccurances(wonPackMatches)
 
-#printing the median
 print(getMedian(wonPackProbs))
 print(getMedian(wonPackMatches))
